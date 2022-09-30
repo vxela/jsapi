@@ -1,12 +1,13 @@
 {
   "name": "lab1",
+  "type": "module",
   "version": "1.0.0",
   "description": "testing create app for learning",
   "main": "index.js",
   "author": "alexx",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.1"
   }
 }

@@ -1,8 +1,7 @@
 import express from "express"
+import { app as appConfig } from "./config.js"
 
 const app = express()
-
-const port = 3000
 
 app.get('/', (req, res) => {
 
@@ -10,8 +9,8 @@ app.get('/', (req, res) => {
 
 })
 
-app.listen(port, () => {
+app.listen(appConfig, () => {
 
-    console.log(`server runing at port ${port}`)
+    console.log(`server runing at http://${appConfig.host}:${appConfig.port}`)
 
 })
