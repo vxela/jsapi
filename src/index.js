@@ -1,5 +1,5 @@
 import express from "express"
-import { app as appConfig } from "./config.js"
+import { app as appConfig } from "./config/general.js"
 
 const app = express()
 
