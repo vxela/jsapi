@@ -1,23 +1,27 @@
 import express from "express"
-import { app as appConfig } from "./config/general.js"
+import { app as appConfig } from "./configs/general.js"
 
 const app = express()
 app.use(express.json());
 
-app.get('/', (req, res) => {
+const router = express.Router() 
+
+router.get('/', (req, res) => {
 
     res.send('hello world')
 
 })
 
-app.get('/:random_number', (req, res) => {
+router.get('/:random_number', (req, res) => {
     res.send(req.params)
 })
 
-app.post('/', (req, res) => {
+router.post('/', (req, res) => {
     const data = req.body
     res.send(data)
 })
+
+app.use(router)
 
 app.listen(appConfig, () => {
 
